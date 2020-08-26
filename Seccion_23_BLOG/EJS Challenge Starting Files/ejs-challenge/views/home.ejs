@@ -1,0 +1,20 @@
+
+<%- include("partials/header"); -%> <!--no olvidar que con esto se incluye la parte "header" del archivo del sitio web que se encuentra en la carpeta partials-->
+    <h1>Home</h1>
+    <p> <%= startingContent %> </p> <!--para pubicar variables siempre se usa "< % = " y cierra con "% >"-->
+
+
+  <%  posts.forEach(function(post){ %> <!--el metodo forEach se utiliza como si fuera un for, que ejecuta el mismo proceso de la funcion por cada elemento del arreglo que se envia, en este caso a cada elemento del objeto post-->
+    <!--esto se utiliza para ejecutar cada publicacion realizada por el usuario, en la funcion recibimos post que es un objeto que contiene titulo y grueso de la publicaciaon hecha por el usuario en la ventana "content"-->
+
+    <h1><%=post.title%></h1>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%> <!-- con .substring mostramos en home los primeros 100 caracteres (0, 100) del grueso de la publicacion hecha por el usuario, despues de eso le añadimos "..." para indicar que continua el texto-->
+    <a href="/posts/<%=post.title%>">Read More</a> <!--linkeamos la palabra "Read More" para que, al hacer click en esta, nos envie a la ruta de la pagina en donde se pone la publicacion completa hecha por el usuario-->
+    </p>
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%> <!--no olvidar que con esto se incluye la parte "footer" del archivo del sitio web que se encuentra en la carpeta partials-->

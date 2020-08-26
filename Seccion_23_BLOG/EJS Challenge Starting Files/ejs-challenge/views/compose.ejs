@@ -1,0 +1,14 @@
+
+<%- include("partials/header"); -%>
+    <h1>Compose</h1>
+    <form class="" action="/compose" method="post">
+      <div class="form-group"> <!--se incluye todo dentro de este div para aplicar el estilo asignado a la clase "form-group" con bootstrap y cada elemento debe tener la clase "form-control" para que puedan tener una separacion adecuada entre ellos-->
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle"> <!-- elemento en el que el usuario escribe lo que desea publicar-->
+        <label>Post</label>
+        <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea> <!--cuadro de texto grande en donde el usuario pone el grueso de la publicacion-->
+      </div>
+      <button class="btn btn-primary" type="submit" name="button">Publish</button> <!--elemento que permite publicar lo escrito por el usuario en el elemento input-->
+    </form>
+                                                                                                     
+<%- include("partials/footer"); -%>

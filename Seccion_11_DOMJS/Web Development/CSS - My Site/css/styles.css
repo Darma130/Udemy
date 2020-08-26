@@ -1,0 +1,163 @@
+body {
+    color: #40514e;
+    margin:0;
+    text-align: center; /*alineado de textos*/
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-size: 5.625rem; /*(90px) por defecto 100% equivale a 16 px manejar tamaño de fuente deseado en porcentaje 
+    y 1em equivale a 100%*/
+    margin: 50px auto 0 auto;
+    font-family: 'Sacramento', cursive; /*tipo de letra*/
+    color: #66bfbf;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem; /*tamaño de fuente*/
+    color: #66bfbf;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #11999e;
+}
+
+p {
+    line-height: 2;
+}
+
+hr {
+    border: dotted #eaf6f6 6px;
+    border-bottom: none; /*esto para que el borde del hr inferior no exista, y con eso quede solo una linea de puntos*/
+    width: 4%;
+    margin: 100px auto;
+}
+
+a {
+   color: #11999e;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: bolder;
+   margin: 10px 20px;
+   text-decoration: none;
+}
+
+a:hover {
+    color: #eaf6f6;
+}
+
+/*div {
+    background-color: #e4f9f5;
+}*/
+
+/******************************CLASS SELECTORS*******************************/
+
+.top-container {
+    background-color: #e4f9f5;
+    position: relative;
+    padding-top: 100px;
+}
+
+.middle-container {
+    margin: 100px 0;
+}
+
+.bottom-container {
+    background-color: #66bfbf;
+    padding: 50px 0 20px;
+}
+
+.skill-row {
+    width: 50%; /*marcamos el ancho que va a utilizar aesta clase o elemento*/
+    margin: 100px auto 100px auto;
+    text-align: left;
+}
+
+.pro {
+    text-decoration: underline; /*subrayado*/
+}
+
+.intro {
+    width: 30%;
+    margin: auto;
+}
+
+.contact-message {
+    width: 40%;
+    margin: 40px auto 60px;
+}
+
+.copyright {
+    color: #eaf6f6;
+    font-size: 0.75rem;
+    padding: 20px 0;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 40px;
+}
+
+.bottom-cloud {
+    position: absolute; /*posicion con respecto a toda la pantalla*/
+    left: 250px;
+    bottom: 300px;
+}
+
+.programmer-img {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.aji-img {
+    width: 25%; /*aumenta y disminuye el tamaño de las imagenes*/
+    float: right; /*hace que las imagenes sean flotantes y se pueda poner texto al lado de las imagenes 
+    (usar en casos muy especificos con imagenes, en otros casos usar position absolute o relative)*/
+    margin-left: 30px;
+}
+
+/*estilo de boton generado con la pagina css3buttongenerator.com 
+    |
+    |
+    v                                                             */
+.btn {
+    background: #30E3CB;
+    background-image: -webkit-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: -moz-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: -ms-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+/*.programmer-skill-description {
+    clear: left; /*Clear limpia todos los cambios que se hayan hecho que afecten a esa clase, en este caso
+    limpia float left
+}
+
+.aji-skill-description {
+    clear: right;
+    text-align: right;
+}*/

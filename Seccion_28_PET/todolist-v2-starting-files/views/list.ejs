@@ -1,0 +1,24 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading">
+    <h1> <%= listTitle %> </h1>
+  </div>
+
+  <div class="box">
+    <% newListItems.forEach(function(item) { %>
+      <form action="/delete" method="post">
+        <div class="item">
+          <input type="checkbox" name="checkbox" value="<%=item._id%>" onchange="this.form.submit()">
+          <p><%=  item.name  %></p> <!--Con .name corregimos el problema de que nos imprima toda la informacion contenida en cada conjunto de datos de la tabla, ahora solo imprime lo que este almacenado en name-->
+        </div>
+        <input type="hidden" name="listName" value="<%= listTitle %>"></input> <!--no olvidar este input creado-->
+      </form>
+   <% });%>
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="list" value="<%= listTitle %>">+</button> <!--asignamos ese value para que se pueda aplicar la logica de asignar el dato generado por el usuario en la lista de la misma ruta en la que el mismo se encuentre, que haya generado dinamicamente-->
+      </form>
+  </div>
+
+<%- include("footer") -%>

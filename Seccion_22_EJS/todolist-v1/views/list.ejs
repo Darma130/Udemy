@@ -1,0 +1,30 @@
+<!--Este archivo siempre se debe almacenar dentro de una carpeta views que este previamente creada dentro del proyecto para que pueda funcionar correctamente-->
+
+<%-  include("header") -%> <!--siempre se puede usar esto cuando se tengan que generar varias paginas para el mismo servidor-->
+
+    <div class="box" id="heading">
+        <h1> <%= listTitle %> </h1>
+    </div>
+
+    <div class="box">
+
+        <%for(var i=0; i<newListItems.length; i++) { %> <!-- se debe hacer esto para que se genere un nuevo item por cada dato ingresado por el usuario-->
+            <div class="item">
+                <input type="checkbox">
+                <p><%=  newListItems[i] %></p>
+            </div>     
+        <%}%>
+
+        <form class="item" action="/" method="POST">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    
+            <button type="submit" name="list" value=<%= listTitle %>>+</button>
+    
+        </form>
+     
+    </div>
+    
+<%-  include("footer") -%> <!--siempre se puede usar esto cuando se tengan que generar varias paginas para el mismo servidor-->
+
+<!--en todas las paginas se debe aplicar esto para que se apliquen estilos y todo lo que se incluye en header y footer-->
+

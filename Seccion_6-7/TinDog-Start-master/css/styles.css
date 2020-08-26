@@ -1,0 +1,191 @@
+body {
+    font-family: "Montserrat";
+    font-weight: 500;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 { /*Si existen varios elementos que tienen la misma propiedad se pueden asignar a todos de manera
+    resumida y de esta forma*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+   color: #8f8f8f; /*asi se cambia el color de la letra*/
+   font-size: 0.8rem;
+}
+
+/*HEADINGS*/
+
+.big-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /*si uno quiere aplicar un estilo de fuente de fonts.google, para que se vea tal y como aparece
+    en fonts.google se debe aplicar el "font-weight" que tenga por defecto ese estilo de fuente en la pagina, en este
+    caso, Montserrat-black tiene por defecto "font-weight" 900*/
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.section-heading {
+    font-weight: 800;
+    font-size: 2.8rem;
+    line-height: 1.5;
+}
+
+/*CONTENEDORES*/
+
+.container-fluid {
+    padding: 7% 15%;
+}
+
+/*SECCIONES*/
+
+.colored-section {
+    background-color: #ff4c68;
+    color: #fff; /*Color de la letra para los elementos pertenecientes a esta clase*/
+}
+
+.white-section {
+    background-color: #fff;
+}
+
+/*BARRA DE NAVEGACION*/
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+/*Botones de Download*/
+
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+/********************************************SECCION TITLE********************************************************/
+
+#title .container-fluid { /*Se puede utilizar una misma clase en dos partes con propiedades distintas si se especifica 
+    el id de la seccion a la cual se va a aplicar la propiedad diferente de la clase, en este caso aplicada a #title*/
+    padding: 3% 15% 7%;
+    text-align: left;
+}
+
+/**NOTA ACLARATORIA: Si se intenta aplicar una propiedad de la siguiente manera -->
+--> .clase.clase1 {} se está diciendo que busque un elemento que tenga al mismo tiempo las clases "clase" y "clase1"
+se tiene que colocar espacio entre los dos para indicar una jerarquia .padre hijo.{} eso quiere decir que "hijo" es
+una clase que se encuentra dentro de la clase "padre"*/
+
+/*imagen de la seccion tittle*/
+
+.tittle-image {
+    width: 60%;
+    transform: rotate(25deg);
+    position: absolute; /*ESTO SE UTILIZA PARA MANIPULAR LA UBICACION DE LA IMAGEN EN EL EJE Z RESPECTO A OTRO ELEMENTO*/
+    right: 30%;
+}
+
+/**********************************************SECCION FEATURES****************************************************/
+
+#features { /*No olvidar que, para cambiar el estilo de un elemento con id se usa "#" asi: #(id elemento)*/
+    position: relative; /*EN ESTE CASO SE UTILIZA ESTE TIPO DE POSITION PARA NO MOVER EL ELEMENTO DE SU SITIO PERO SE PUEDA MANIPULAR EN EL EJE Z*/
+    z-index: 1; /*ESTA PROPIEDAD NOS PERMITE MOVEL EL ELEMENTO EN EL EJE Z LA CANTIDAD DE UNIDADES DESEADAS, EN ESTE CASO
+    1 PARA QUE EL ELEMENTO SE UBIQUE ADELANDE REPECTO A LA .tittle-image IGUALMENTE MANIPULADA EN SU POSICION*/
+}
+
+.feature-title {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.feature-box {
+    padding: 5%;
+}
+.icon {
+    color: #ef8172;
+    margin-bottom: 1rem;
+    
+}
+.icon:hover { /*NO OLVIDAR QUE ESTA SUBCLASE ES PARA HACER CAMBIO DE COLOR CUANDO SE PONGA EL MOUSE SOBRE UNA IMAGEN*/
+    color: #ff4c68;
+}
+
+/*************************************************SECCION TESTIMONIOS*********************************************/
+
+#testimonials {
+    background-color: #ef8172;
+}
+
+.testimonial-text {
+    font-weight: 800;
+    font-size: 2.8rem;
+    line-height: 1.5;
+}
+
+.testimonial-image {
+    width: 10%;
+    border-radius: 100%; /*NO OLVIDAR QUE CON ESTO SE PUEDE HACER QUE UNA IMAGEN SEA CIRCULAR*/
+}
+
+/****************************************************SECCION PRESS*********************************************/
+#press {
+    background-color: #ef8172;
+    padding-bottom: 3%;
+}
+
+.press-logo {
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+/****************************************************SECCION PRICING*********************************************/
+
+#pricing {
+    padding: 100px;
+}
+
+.price-text {
+    font-weight: 800;
+    font-size: 2.8rem;
+    line-height: 1.5;
+}
+
+.pricing-colum {
+    padding: 3% 2%;
+}
+
+
+/*****************************************************SECCION FOOTER************************************************/
+
+.social-icon {
+    margin: 20px 10px;
+}
+
+@media (max-width: 1048px) { /*Esto es un condicional que me permite hacer cambios a las propiedades de los elementos que 
+    se incluyan dentro de las {} y dichos cambios se realizan cuando ocurre la condicion que se indica dentro del () en
+    este caso, no realiza los cambios si la pantalla tiene un tamaño horizontal mayor a 1048 px, en caso contrario aplica
+    los cambios a los elementos siguientes
+    |
+    v */
+
+    #title {
+        text-align: center;
+    }
+
+    .tittle-image {
+        position: static;
+        transform: rotate(0);
+    }
+}
